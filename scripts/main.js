@@ -32,7 +32,7 @@ console.log(localStorage.getItem('vehiculo'));
 
 //Objeto AutomovilDeportivo
 const deportivo1 = new AutomovilDeportivo('Ferrari', 'Spider', 'amarillo', 2020, '4000', '500cv');
-mostrarResultado('<br><br><br>---Deportivo---');
+mostrarResultado('<br>---Deportivo---');
 deportivo1.mostrarDatos();
 deportivo1.arrancar();
 deportivo1.acelerar(140);
