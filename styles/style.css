@@ -33,6 +33,12 @@ h1{
     width: 50%;
     margin: 50px auto;
     border-radius: 15px;
+    background: rgb(249,229,158);
+background: linear-gradient(0deg, rgba(249,229,158,1) 0%, rgba(250,190,248,1) 100%);
+border: 3px black solid;
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .title{
     font-size: xx-large;
@@ -50,7 +56,7 @@ p{
 
 /*Modifica la primera letra del título*/
 h1::first-letter{
-    color: rgb(195, 2, 169);
+    color: rgb(255, 144, 240);
     font-size: 5rem;
     
 }
@@ -59,16 +65,16 @@ h1::first-letter{
     color: black;
 }
 @keyframes blink {
-    0% { 
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% { opacity: 0; 
-    }
-
-    100% {
-        opacity: 1;
-    }
+    from {
+		-webkit-transform: rotate(0deg);
+        transform: rotateY(0deg);
+	}
+  50%{
+		-webkit-transform: rotate(180deg);
+        transform: rotateY(180deg);
+	} 
+	to {
+		-webkit-transform: rotate(360deg);
+        transform: rotateY(360deg);
+		}
 }
