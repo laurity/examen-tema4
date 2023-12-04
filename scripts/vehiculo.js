@@ -12,7 +12,7 @@ export class Vehiculo {
         this.#modelo = modelo;
         this.#color = color;
         this.#anioFabricacion = anioFabricacion;
-        this.cilindrada = cilindrada;
+        this.#cilindrada = cilindrada;
     }
 
     mostrarDatos(){
@@ -28,12 +28,10 @@ export class Vehiculo {
             br>
             <p>La cilindrada del vehiculo es: ${this.#cilindrada}</p>
             `;
-    
+            
         }
         mostrarResultado(mensaje) {
-             mensaje = `<p>${datos}</p>`;
-        
-    }
+            let mensaje = `<p>${datos}</p>`;}
 
     acelerar(velocidad){
         let mensaje = `<p>El vehiculo ha acelerado hasta ${velocidad}</p>`;
