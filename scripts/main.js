@@ -1,16 +1,18 @@
 import { Vehiculo} from './vehiculo.js';
 import { AutomovilDeportivo } from './automovilDeportivo.js';
 
+//Creamos el elemento div
 const resultadoContainer = document.createElement('div');
 document.body.appendChild(resultadoContainer);
+resultadoContainer.className = 'automovil';
 
 export function mostrarResultado(mensaje) {
-resultadoContainer.innerHTML+=`<p>${mensaje}</p>`;
+resultadoContainer.innerHTML+=`<p class="title">${mensaje}</p>`;
 }
 
 //Objetos Vehiculo
 const vehiculo1 = new Vehiculo('BMW', 'CLK', 'rojo', 1992, '2400');
-mostrarResultado('Vehiculo');
+mostrarResultado('---Vehiculo---');
 vehiculo1.mostrarDatos();
 vehiculo1.arrancar();
 vehiculo1.acelerar(140);
@@ -30,13 +32,14 @@ console.log(localStorage.getItem('vehiculo'));
 
 //Objeto AutomovilDeportivo
 const deportivo1 = new AutomovilDeportivo('Ferrari', 'Spider', 'amarillo', 2020, '4000', '500cv');
-mostrarResultado('Deportivo');
+mostrarResultado('<br><br><br>---Deportivo---');
 deportivo1.mostrarDatos();
 deportivo1.arrancar();
 deportivo1.acelerar(140);
 deportivo1.frenar();
 deportivo1.activarModoDeportivo();
 
+//Creamos el objeto Object Deportivo
 const deportivoObject = {
     marca: deportivo1.marca,
     modelo: deportivo1.modelo,

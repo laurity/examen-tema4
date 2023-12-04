@@ -1,7 +1,38 @@
-p{
-    color: red;
+/*Importamos Fuente*/
+@font-face {
+    font-family: 'Hedving';
+    src: url('../assets/fonts/HedvigLettersSans-Regular.ttf');
 }
-p::first-letter{
-    color:blue;
+
+body{
+    /*Insertar Fuente*/
+    font-family: 'Hedving', sans-serif;
+    /*Insertar imagen*/
+    background-image: url('../assets/imgs/fondo.jpg');
+    /*Cubrimos todo el ancho de la pagina*/
+    background-size: cover;
+    /*Se mantiene la imagen fija*/
+    background-attachment: fixed;
+    /*Evita la repeticion de la imagen*/
+    background-repeat: no-repeat;
+    text-align: center;
+}
+h1{
+    font-size: 3rem;
+    text-shadow: 3px 3px 3px blue;
+}
+.automovil{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    background-color: rgba(184, 64, 180, 0.432);
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 15px;
+}
+.title{
     font-size: xx-large;
 }
