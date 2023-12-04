@@ -1,12 +1,13 @@
 import {mostrarResultado} from './main.js'
 
+//Creamos la clase
 export class Vehiculo {
     #marca;
     #modelo;
     #color;
     #anioFabricacion;
     #cilindrada;
-
+//Creamos constructor
     constructor(marca, modelo, color, anioFabricacion,cilindrada) {
         this.#marca = marca;
         this.#modelo = modelo;
@@ -25,14 +26,15 @@ export class Vehiculo {
             <br>
             <p>El color del vehiculo es: ${this.#color}</p>
             <br>
-            <p>EL año de fabricacion es: ${this.#anioFabricacion}</p>
+            <p>El año de fabricacion es: ${this.#anioFabricacion}</p>
             <br>
             <p>La cilindrada del vehiculo es: ${this.#cilindrada}</p>
             `;
+            //Mostrar los datos en el resultado
             mostrarResultado(datos) 
         }
         
-
+    //Funciones de la clases padre
     acelerar(velocidad){
         let mensaje = `<p>El vehiculo ha acelerado hasta ${velocidad}</p>`;
         mostrarResultado(mensaje)
@@ -45,6 +47,8 @@ export class Vehiculo {
         let mensaje = `<p>EL vehiculo ha frenado</p>`;
         mostrarResultado(mensaje)
     }
+
+    //Getters y setters
 
     get marca() {
         return this.#marca;

@@ -6,6 +6,7 @@ const resultadoContainer = document.createElement('div');
 document.body.appendChild(resultadoContainer);
 resultadoContainer.className = 'automovil';
 
+//Concatenamos para que se muestre toda la informacion
 export function mostrarResultado(mensaje) {
 resultadoContainer.innerHTML+=`<p class="title">${mensaje}</p>`;
 }
@@ -19,7 +20,6 @@ vehiculo1.acelerar(140);
 vehiculo1.frenar();
 
 //Creamos LocalStorage
-
 const vehiculoObject = {
     marca: vehiculo1.marca,
     modelo: vehiculo1.modelo,
@@ -48,7 +48,7 @@ const deportivoObject = {
     cilindrada: deportivo1.cilindrada,
     potenciaMotor: deportivo1.potenciaMotor
 }
-//Recorro el bucle para iterar en cada atributo del objeto
+//Recorro el bucle para iterar en cada atributo del objeto y crearlo
 for (const key in deportivoObject) {
     if (deportivoObject.hasOwnProperty(key)) {
      localStorage.setItem(key, JSON.stringify(deportivoObject[key]));
