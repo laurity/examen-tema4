@@ -16,6 +16,7 @@ export class Vehiculo {
     }
 
     mostrarDatos(){
+        
         const datos = 
             `
             <p>La marca del vehiculo es: ${this.#marca}</p>
@@ -25,13 +26,12 @@ export class Vehiculo {
             <p>El color del vehiculo es: ${this.#color}</p>
             <br>
             <p>EL año de fabricacion es: ${this.#anioFabricacion}</p>
-            br>
+            <br>
             <p>La cilindrada del vehiculo es: ${this.#cilindrada}</p>
             `;
-            
+            mostrarResultado(datos) 
         }
-        mostrarResultado(mensaje) {
-            let mensaje = `<p>${datos}</p>`;}
+        
 
     acelerar(velocidad){
         let mensaje = `<p>El vehiculo ha acelerado hasta ${velocidad}</p>`;
