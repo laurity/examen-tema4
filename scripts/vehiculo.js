@@ -24,18 +24,25 @@ export class Vehiculo {
             <p>EL año de fabricacion es: ${this.#anioFabricacion}</p>
             <p>La cilindrada del vehiculo es: ${this.#cilindrada}</p>
             `
-     
-        ]
+        ];
+
+        mostrarResultado(mensaje) {
+            let mensaje = `<p>${datos}</p>`;
+        }
+        
     }
 
     acelerar(velocidad){
-        let mesaje = `<p>El vehiculo ha acelerado hasta ${velocidad}</p>`;
+        let mensaje = `<p>El vehiculo ha acelerado hasta ${velocidad}</p>`;
+        mostrarResultado(mensaje)
     }
     arrancar(){
         let mensaje= `<p>El vehiculo ha acelerado</p>`;
+        mostrarResultado(mensaje)
     }
     frenar(){
         let mensaje = `<p>EL vehiculo ha frenado</p>`;
+        mostrarResultado(mensaje)
     }
 
     get marca() {
@@ -77,5 +84,7 @@ export class Vehiculo {
     set cilindrada(value) {
         this.#cilindrada = value;
     }
+
+    
 
 }
