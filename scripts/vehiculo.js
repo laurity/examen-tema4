@@ -41,5 +41,41 @@ export class Vehiculo {
     get marca() {
         return this.#marca;
     }
+    
+    set marca(value) {
+        this.#marca = value;
+    }
+
+    get modelo() {
+        return this.#modelo;
+    }
+    
+    set modelo(value) {
+        this.#modelo = value;
+    }
+
+    get color() {
+        return this.#color;
+    }
+    
+    set color(value) {
+        this.#color = value;
+    }
+
+    get anioFabricacion() {
+        return this.#anioFabricacion;
+    }
+    
+    set anioFabricacion(value) {
+        this.#anioFabricacion = value;
+    }
+
+    get cilindrada() {
+        return this.#cilindrada;
+    }
+    
+    set cilindrada(value) {
+        this.#cilindrada = value;
+    }
 
 }
